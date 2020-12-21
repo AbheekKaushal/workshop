@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <style>
+            </style>
+            
+      </head>
+      <body background="s.jpg">
+
+        <div style="height:50%;width:50%;margin-left:40%;margin-top:250px;">
+          <h1 style="margin-left:55px;font-size:44px;color:rgb(12, 12, 12);">SHAPES!!!!!</h1>  
+        <div id ="shape" style="height:150px;width:0px;background-color: rgba(255, 255, 255, 0);"></div>
+          <button style="margin-left:55px;padding:10px;height:65px;width: 100px;background-color: red;margin-top:50px;" onclick="rectangle()">Rectangle</button>
+          <button style="padding:10px;height:65px;width:65px;background-color: green;margin-top: auto;"  onclick="sqaure()">Sqaure</button>
+          <button style="padding:10px;height:65px;width:65px;background-color:yellow;border-radius:100%;margin-top: auto;" onclick="circle()">Circle</button>
+        </div>  
+      </body>
+      <script>
+          function rectangle(){ 
+            document.getElementById('shape').style['margin-left']='20px'; 
+            document.getElementById('shape').style['height']='150px';
+            document.getElementById('shape').style['width']='300px';
+            document.getElementById('shape').style['background-color']='red';
+            document.getElementById('shape').style['border-radius']='0%';
+            
+          }
+          function sqaure(){  
+            document.getElementById('shape').style['margin-left']='100px'; 
+            document.getElementById('shape').style['height']='150px';
+            document.getElementById('shape').style['width']='150px';
+             document.getElementById('shape').style['background-color']='green';
+             document.getElementById('shape').style['border-radius']='0%';
+            }
+
+            function circle(){ 
+            document.getElementById('shape').style['margin-left']='100px'; 
+            document.getElementById('shape').style['width']='150px';
+            document.getElementById('shape').style['background-color']='yellow';
+            document.getElementById('shape').style['border-radius']='100%';
+            }
+           
+      </script>
+</html>
