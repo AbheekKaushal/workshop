@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+ <html>
+            <head>
+                <style>
+                      body{
+                        background:url(dtu.jpg) no-repeat;   
+                        align-items:center;
+                        justify-content: center;
+                        position: fixed;
+                      }
+                      .loader  {    
+                                     border: 16px solid #f3f3f349;
+                                     border-radius: 50%;
+                                     border-top: 16px solid #3498db;
+                                     width: 75px;
+                                     height: 75px;
+                                     animation: spin 1s linear infinite;
+
+                              }
+                              @keyframes spin {
+                                                0% { margin-left:690px ; transform: rotate(0deg); }
+                                                25%{ margin-left:690px ;border-top: 16px solid rgb(252, 35, 35);transform: rotate(90deg); }
+                                                50%{ margin-left:690px ;border-top: 16px solid rgba(35, 245, 130, 0.856);transform: rotate(180deg); }
+                                                100% { margin-left:690px ; border-top: 16px solid rgb(219, 252, 35); transform: rotate(360deg); }
+                                              }
+                   
+                </style>
+            </head>
+            <body>
+                  <div style="margin-left:630px;position:fixed;"><img src="logo.png"/></div>
+                  <div style="margin-left:435px;margin-top:250px;position: fixed;display: flex;">
+                    <div style="background-color:rgba(255, 255, 255, 0.397)">
+                        <table border="5" id="ts">
+                            <tr>
+                                <td style="font-weight:bold;">STUDENT'S TABLE</td>
+                            </tr>
+                            <tr>
+                                <td><b>Name</b></td>
+                                <td><b>Batch</b></td>
+                                <td><b>Branch</b></td>
+                                <td><b>Year</b></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="background-color: rgba(255, 255, 255, 0.397); margin-left: 10px;">
+                        <table border="5" id="tt">
+                            <tr>
+                                <td style="font-weight:bold;">TEACHER'S TABLE</td>
+                            </tr>
+                            <tr><td><b>Teacher's Name</b></td><td><b>Subject</b></td><td><b>Occupation</b></td></tr>  
+                        </table>
+                  </div>
+            </div>  
+                <div id="but" style="margin-left:668px;margin-top:350px;"> <button id="bt" onclick="setTimeout(show,2000);ani();setTimeout(dele,2000)"  style=" padding:2;height: 75px; width: 150px; border-radius:50px;background-color:rgba(255, 51, 51, 0.966);color: rgb(255, 230, 217);font-size:25px;border-color: rgba(255, 235, 205, 0);">Click Here For Info</button> </div>
+            <script>
+                var c=0;  
+             
+                  function ani(){
+                        var el=document.getElementById("bt").style.visibility="hidden";
+                        var element=document.getElementById("but");
+                        element.classList.add("loader")
+                              }
+                  function dele(){
+                        var element=document.getElementById("but");
+                        element.style.visibility="hidden"
+                  }            
+                  
+                  
+                    function show(){  
+
+                        
+                  
+                            var dtu={
+                                s:[],
+                                t:[]
+                                    }
+                              
+                              if(c==0){
+                                          c++;
+                                dtu.s.push({'name':'Abheek','batch':'B1','branch':'COE','year':'1st'},
+                                                {'name':'Sam','batch':'A5','branch':'COE','year':'3rd'},
+                                                {'name':'Raj','batch':'A6','branch':'ECE','year':'4th'},
+                                                {'name':'Aryan','batch':'A7','branch':'SE','year':'3rd'},
+                                                {'name':'Dhruv','batch':'B9','branch':'COE','year':'2nd'},
+                                                {'name':'Arya','batch':'B7','branch':'CE','year':'1st'},
+                                                {'name':'Sandeep','batch':'A9','branch':'IT','year':'3rd'},
+                                                {'name':'Rohit','batch':'A2','branch':'MAC','year':'4th'},
+                                                {'name':'Ahmed','batch':'A1','branch':'ME','year':'3rd'},
+                                                {'name':'Revanth','batch':'B6','branch':'CE','year':'2nd'})
+                              
+                                                var t=document.getElementById('ts')
+                                
+                                for(var i=0;i<dtu.s.length;i++){
+                                    t.innerHTML+='<tr><td>'+dtu.s[i].name+'</td>'+'<td>'+dtu.s[i].batch+'</td>'+'<td>'+dtu.s[i].branch+'</td>'+'<td>'+dtu.s[i].year+'</td></tr>'
+                                                               }
+                                
+                                dtu.t.push({"tname":'Anshu','Subject':'COE101','Occupation':'Class Coordinator'},
+                                                {"tname":'Rinku','Subject':'AP101','Occupation':'Teacher'},
+                                                {"tname":'C.P. Singh','Subject':'MA101','Occupation':'Teacher'},
+                                                {"tname":'Rajeev','Subject':'ME105','Occupation':'Teaching Assit.'},
+                                                {"tname":'Ankita','Subject':'EE101','Occupation':'Teacher'},
+                                                {"tname":'Annu','Subject':'COE101','Occupation':'Class Coordinator'},
+                                                {"tname":'Ranni','Subject':'AP101','Occupation':'Teacher'},
+                                                {"tname":'Gopi','Subject':'EE101','Occupation':'Teacher'},
+                                                {"tname":'Pratham','Subject':'CE105','Occupation':'Teaching Assit.'},
+                                                {"tname":'Reena','Subject':'AP101','Occupation':'Teacher'})
+                                
+                                                var t=document.getElementById('tt')
+                                
+                                for(var i=0;i<dtu.t.length;i++){
+                                    t.innerHTML+="<tr><td>"+dtu.t[i].tname+'</td>'+'<td>'+dtu.t[i].Subject+'</td>'+'<td>'+dtu.t[i].Occupation+'</td></tr>'
+                                                               }
+                                 
+                            }
+
+                        }
+            </script>
+            
+            </body>
+ </html>
